@@ -23,32 +23,66 @@ const partyImg=document.querySelector('#party');
 partyImg.addEventListener('click',function(){
   boxImg.style.backgroundImage="url(./party2.svg)"; 
   changeText.innerText="LET'S PARTY !!";
+  textReplace.innerText=" ";
+  
 });
+partyImg.addEventListener('dblclick',function(){
+  party.innerText="Party Over";
+  boxImg.style.backgroundImage="url(./aa.webp)";
+  changeText.innerText="OVER !!";
+  const partyImg=document.querySelector('#party');
+/* partyImg.addEventListener('dblclick',function(){
+  boxImg.style.backgroundImage="url(./party2.svg)"; 
+  party.innerText="Party Time!";
+  changeText.innerText="LET'S PARTY !!"; */
+/* }) */
+});
+
 
 //Change image with by clicking on options
 const changeImg1=document.querySelector('#morningImg');
-changeImg1.addEventListener('click',function(){
+var d = new Date();
+var h = d.getHours();
+changeImg1.addEventListener('change',function(){
+  if(this.value==h){
   boxImg.style.backgroundImage="url(./3.png)";
   changeText.innerText="WAKE UP, EAT BREAKFAST !!";
-  textReplace.innerText="GOOD MORNING !!";
+  textReplace.innerText="GOOD MORNING !!";}
+  else{
+    boxImg.style.backgroundImage="url(./aa.webp)"; 
+  changeText.innerText="#DAILY_SCHEDULE";
+  textReplace.innerText="DO WORK";
+  }
 });
 
 const changeImg2=document.querySelector('#afternoonImg');
-changeImg2.addEventListener('click',function(){
+changeImg2.addEventListener('change',function(){
+  if(this.value==h){
   boxImg.style.backgroundImage="url(./home.png)";
   changeText.innerText="LET'S HAVE SOME LUNCH !!";
-  textReplace.innerText="GOOD AFTERNOON !!";
+  textReplace.innerText="GOOD AFTERNOON !!";}
+  else{
+    boxImg.style.backgroundImage="url(./aa.webp)"; 
+    changeText.innerText="#DAILY_SCHEDULE";
+    textReplace.innerText="DO WORK";
+  }
 });
 
 const changeImg3=document.querySelector('#nightImg');
-changeImg3.addEventListener('click',function(){
+changeImg3.addEventListener('change',function(){
+  if(this.value==h){
   boxImg.style.backgroundImage="url(./2.png)";
   changeText.innerText="LET'S SLEEP !!";
-  textReplace.innerText="GOOD NIGHT !!";
+  textReplace.innerText="GOOD NIGHT !!";}
+  else{
+    boxImg.style.backgroundImage="url(./aa.webp)"; 
+    changeText.innerText="#DAILY_SCHEDULE";
+    textReplace.innerText="DO WORK";
+  }
 });
 
 //Images changes with Time
-var d = new Date();
+/* var d = new Date();
 var h = d.getHours(); 
 if(h>=5 && h<12){
   boxImg.style.backgroundImage="url(./3.png)";
@@ -69,4 +103,5 @@ else{
   boxImg.style.backgroundImage="url(./party2.svg)"; 
   changeText.innerText="LET'S PARTY !!";
   document.getElementById("textReplace").style.display="none";
-}
+} */
+
