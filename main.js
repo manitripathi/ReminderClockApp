@@ -44,7 +44,7 @@ const changeImg1=document.querySelector('#morningImg');
 var d = new Date();
 var h = d.getHours();
 changeImg1.addEventListener('change',function(){
-  if(this.value==h){
+  if(changeImg1){
   boxImg.style.backgroundImage="url(./3.png)";
   changeText.innerText="WAKE UP, EAT BREAKFAST !!";
   textReplace.innerText="GOOD MORNING !!";}
@@ -57,7 +57,7 @@ changeImg1.addEventListener('change',function(){
 
 const changeImg2=document.querySelector('#afternoonImg');
 changeImg2.addEventListener('change',function(){
-  if(this.value==h){
+  if(changeImg2){
   boxImg.style.backgroundImage="url(./home.png)";
   changeText.innerText="LET'S HAVE SOME LUNCH !!";
   textReplace.innerText="GOOD AFTERNOON !!";}
@@ -70,7 +70,7 @@ changeImg2.addEventListener('change',function(){
 
 const changeImg3=document.querySelector('#nightImg');
 changeImg3.addEventListener('change',function(){
-  if(this.value==h){
+  if(changeImg3){
   boxImg.style.backgroundImage="url(./2.png)";
   changeText.innerText="LET'S SLEEP !!";
   textReplace.innerText="GOOD NIGHT !!";}
