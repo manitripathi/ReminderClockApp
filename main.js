@@ -31,20 +31,26 @@ partyImg.addEventListener('dblclick',function(){
   boxImg.style.backgroundImage="url(./aa.webp)";
   changeText.innerText="OVER !!";
   const partyImg=document.querySelector('#party');
-/* partyImg.addEventListener('dblclick',function(){
+partyImg.addEventListener('click',function(){
   boxImg.style.backgroundImage="url(./party2.svg)"; 
   party.innerText="Party Time!";
-  changeText.innerText="LET'S PARTY !!"; */
-/* }) */
+  changeText.innerText="LET'S PARTY !!";
+})
 });
 
 
 //Change image with by clicking on options
-const changeImg1=document.querySelector('#morningImg');
+const changeImg1=document.querySelector('.o1');
+const changeImg2=document.querySelector('.o2');
+const changeImg3=document.querySelector('.o3');
 var d = new Date();
-var h = d.getHours();
+var h = d.getHours(); 
+console.log(h);
+console.log(this.value);
+
+
 changeImg1.addEventListener('change',function(){
-  if(changeImg1){
+  if(this.value==h){
   boxImg.style.backgroundImage="url(./3.png)";
   changeText.innerText="WAKE UP, EAT BREAKFAST !!";
   textReplace.innerText="GOOD MORNING !!";}
@@ -55,9 +61,9 @@ changeImg1.addEventListener('change',function(){
   }
 });
 
-const changeImg2=document.querySelector('#afternoonImg');
+
 changeImg2.addEventListener('change',function(){
-  if(changeImg2){
+  if(this.value==h){
   boxImg.style.backgroundImage="url(./home.png)";
   changeText.innerText="LET'S HAVE SOME LUNCH !!";
   textReplace.innerText="GOOD AFTERNOON !!";}
@@ -68,9 +74,9 @@ changeImg2.addEventListener('change',function(){
   }
 });
 
-const changeImg3=document.querySelector('#nightImg');
+
 changeImg3.addEventListener('change',function(){
-  if(changeImg3){
+  if(changeImg3.value==h){
   boxImg.style.backgroundImage="url(./2.png)";
   changeText.innerText="LET'S SLEEP !!";
   textReplace.innerText="GOOD NIGHT !!";}
